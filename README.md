@@ -70,5 +70,3 @@ Este projeto está sob a licença MIT.
 - [Google Fonts](https://fonts.google.com/) pela fonte Inter
 
 ---
-
-**Desenvolvido com amor para facilitar conversões de moedas em tempo real!** 
