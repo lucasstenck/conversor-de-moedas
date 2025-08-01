@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas - 150 Moedas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-exchange-alt"></i> Conversor de Moedas</h1>
+                <p>Converter entre 150 moedas em tempo real</p>
+                <div class="status">
+                    <span id="lastUpdate">Última atualização: --</span>
+                    <div class="status-indicator" id="statusIndicator"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="converter-card">
+                <div class="converter-header">
+                    <h2>Converter Moedas</h2>
+                    <button id="swapBtn" class="swap-btn">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                </div>
+
+                <div class="converter-form">
+                    <div class="input-group">
+                        <label for="fromCurrency">De:</label>
+                        <div class="select-wrapper">
+                            <select id="fromCurrency" class="currency-select">
+                                <option value="">Selecione a moeda</option>
+                            </select>
+                        </div>
+                        <div class="amount-input">
+                            <input type="number" id="fromAmount" placeholder="0.00" step="0.01" min="0">
+                        </div>
+                    </div>
+
+                    <div class="conversion-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="toCurrency">Para:</label>
+                        <div class="select-wrapper">
+                            <select id="toCurrency" class="currency-select">
+                                <option value="">Selecione a moeda</option>
+                            </select>
+                        </div>
+                        <div class="amount-input">
+                            <input type="number" id="toAmount" placeholder="0.00" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conversion-info" id="conversionInfo" style="display: none;">
+                    <div class="rate-info">
+                        <span>Taxa de câmbio: </span>
+                        <span id="rateInfo">--</span>
+                    </div>
+                    <div class="last-update-info">
+                        <span>Atualizado em: </span>
+                        <span id="updateInfo">--</span>
+                    </div>
+                </div>
+
+                <button id="convertBtn" class="convert-btn" disabled>
+                    <i class="fas fa-calculator"></i> Converter
+                </button>
+            </div>
+
+            <div class="popular-currencies">
+                <h3>Moedas Populares</h3>
+                <div class="currency-grid" id="popularCurrencies">
+                    <!-- Popular currencies will be loaded here -->
+                </div>
+            </div>
+
+            <div class="all-currencies">
+                <h3>Todas as Moedas (150)</h3>
+                <div class="search-container">
+                    <input type="text" id="currencySearch" placeholder="Buscar moeda..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="currency-list" id="allCurrencies">
+                    <!-- All currencies will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
