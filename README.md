@@ -66,7 +66,6 @@ Este projeto está sob a licença MIT.
 ## Agradecimentos
 
 - [AwesomeAPI](https://economia.awesomeapi.com.br/) pela API de taxas de câmbio
-- [Font Awesome](https://fontawesome.com/) pelos ícones
-- [Google Fonts](https://fonts.google.com/) pela fonte Inter
+
 
 ---
