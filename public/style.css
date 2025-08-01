@@ -6,9 +6,9 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #1d4ed8 75%, #1e40af 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2d2d2d 50%, #1a1a1a 75%, #0a0a0a 100%);
     min-height: 100vh;
-    color: #f8fafc;
+    color: #f0f0f0;
     line-height: 1.6;
     position: relative;
 }
@@ -21,9 +21,9 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.4) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.2) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
 }
@@ -44,8 +44,8 @@ body::before {
     font-size: 3.5rem;
     font-weight: 900;
     margin-bottom: 15px;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    background: linear-gradient(45deg, #ffffff, #e0f2fe, #bae6fd);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0, #d0d0d0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -54,10 +54,11 @@ body::before {
 
 .header-content p {
     font-size: 1.3rem;
-    opacity: 0.95;
+    opacity: 0.9;
     margin-bottom: 25px;
     font-weight: 300;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: #e0e0e0;
 }
 
 .status {
@@ -66,12 +67,13 @@ body::before {
     justify-content: center;
     gap: 12px;
     font-size: 0.95rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     padding: 15px 30px;
     border-radius: 50px;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    color: #e0e0e0;
 }
 
 .status-indicator {
@@ -100,16 +102,16 @@ body::before {
 }
 
 .converter-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(20, 20, 20, 0.95);
     border-radius: 28px;
     padding: 45px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
     backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    color: #374151;
+    color: #e0e0e0;
 }
 
 .converter-card::before {
@@ -138,8 +140,8 @@ body::before {
 .converter-header h2 {
     font-size: 2rem;
     font-weight: 800;
-    color: #1e293b;
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6, #06b6d4);
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #e0e0e0, #d0d0d0, #c0c0c0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -196,7 +198,7 @@ body::before {
 
 .input-group label {
     font-weight: 700;
-    color: #374151;
+    color: #e0e0e0;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -210,15 +212,15 @@ body::before {
 .currency-select {
     width: 100%;
     padding: 20px 25px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #404040;
     border-radius: 18px;
     font-size: 1.1rem;
-    background: white;
+    background: #2a2a2a;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 600;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    color: #374151;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: #e0e0e0;
 }
 
 .currency-select:focus {
@@ -231,13 +233,14 @@ body::before {
 .amount-input input {
     width: 100%;
     padding: 20px 25px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #404040;
     border-radius: 18px;
     font-size: 1.3rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 700;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    color: #374151;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: #e0e0e0;
+    background: #2a2a2a;
 }
 
 .amount-input input:focus {
@@ -263,15 +266,15 @@ body::before {
 }
 
 .conversion-info {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
     padding: 30px;
     border-radius: 20px;
     margin: 30px 0;
-    border-left: 6px solid #3b82f6;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-left: 6px solid #e0e0e0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
-    color: #374151;
+    color: #e0e0e0;
 }
 
 .conversion-info::before {
@@ -299,7 +302,7 @@ body::before {
     font-weight: 600;
     position: relative;
     z-index: 1;
-    color: #374151;
+    color: #e0e0e0;
 }
 
 .rate-info:last-child, .last-update-info:last-child {
@@ -352,16 +355,16 @@ body::before {
 }
 
 .popular-currencies, .all-currencies {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(20, 20, 20, 0.95);
     border-radius: 28px;
     padding: 45px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
     backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    color: #374151;
+    color: #e0e0e0;
 }
 
 .popular-currencies::before, .all-currencies::before {
@@ -384,8 +387,8 @@ body::before {
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 30px;
-    color: #1e293b;
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6, #06b6d4);
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #e0e0e0, #d0d0d0, #c0c0c0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -399,17 +402,17 @@ body::before {
 }
 
 .currency-item {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
     padding: 25px;
     border-radius: 20px;
     text-align: center;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     position: relative;
     overflow: hidden;
-    color: #374151;
+    color: #e0e0e0;
 }
 
 .currency-item::before {
@@ -466,13 +469,14 @@ body::before {
 .search-input {
     width: 100%;
     padding: 20px 60px 20px 25px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #404040;
     border-radius: 18px;
     font-size: 1.2rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    color: #374151;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    color: #e0e0e0;
+    background: #2a2a2a;
 }
 
 .search-input:focus {
@@ -500,7 +504,7 @@ body::before {
 }
 
 .currency-list-item {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
     padding: 20px 25px;
     border-radius: 16px;
     cursor: pointer;
@@ -509,10 +513,10 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     position: relative;
     overflow: hidden;
-    color: #374151;
+    color: #e0e0e0;
 }
 
 .currency-list-item::before {
@@ -739,4 +743,139 @@ body::before {
 
 .all-currencies {
     animation-delay: 0.6s;
+}
+
+/* Footer */
+.footer {
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(25px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+    color: #e0e0e0;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #06b6d4, #8b5cf6);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info p {
+    font-size: 1rem;
+    font-weight: 100;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.github-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.github-link:hover::before {
+    left: 100%;
+}
+
+.github-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    color: white;
+    background: #1a1a1a;
+}
+
+.github-link i {
+    font-size: 1.2rem;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        max-width: 600px;
+    }
+    
+    .footer-info p {
+        font-size: 0.9rem;
+        font-weight: 100;
+    }
+    
+    .github-link {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px 0;
+        margin-top: 30px;
+    }
+    
+    .footer-content {
+        padding: 0 10px;
+        max-width: 500px;
+    }
+    
+    .footer-info p {
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+    
+    .github-link {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .github-link i {
+        font-size: 1rem;
+    }
 } 
